@@ -43,7 +43,7 @@ for i in range(num_fetch_threads):
   worker.setDaemon(True)
   worker.start()
 
-f = open('kickstarter_urls_sample'); lines = f.readlines(); f.close()
+f = open('kickstarter_urls'); lines = f.readlines(); f.close()
 
 for line in lines:
   queue.put(line.rstrip())
