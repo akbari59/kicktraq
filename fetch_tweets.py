@@ -6,7 +6,6 @@ import urllib2, socket
 num_fetch_threads = 4
 topsy_per_page = 100
 queue = Queue(4)
-r = redis.StrictRedis(host='107.170.253.33')
 
 def fetch_tweets(query, cursor=None):
   base_url = "https://twitter.com/search?f=realtime&q={0}&src=typd".format(query)
