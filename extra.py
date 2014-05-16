@@ -51,8 +51,8 @@ for i in range(num_fetch_threads):
   worker.setDaemon(True)
   worker.start()
 
-#hostname = socket.gethostname()
-f = open("full_output"); lines = f.readlines(); f.close()
+hostname = socket.gethostname()
+f = open(hostname); lines = f.readlines(); f.close()
 
 for line in lines:
   queue.put(line.rstrip())
